@@ -27,6 +27,18 @@
     </div>
 
     <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-3 offset-md-9 offset-0">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="search">
+                    <div class="input-group-append">
+                        <button class="btn btn-secondary" type="button">
+                          <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <table class="table table-striped bg-light">
             <thead>
                 <tr>
@@ -40,7 +52,15 @@
                 </tr>
             </thead>
             <tbody>
-                <tr></tr>
+                <tr *ngFor="let row of list$ | async">
+                    <td>{{ row.id }}</td>
+                    <td>{{ row.first_name }}</td>
+                    <td>{{ row.last_name }}</td>
+                    <td>{{ row.email }}</td>
+                    <td>{{ row.gender }}</td>
+                    <td>{{ row.address }}</td>
+                    <td></td>
+                </tr>
             </tbody>
         </table>
 
