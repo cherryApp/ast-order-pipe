@@ -1,27 +1,20 @@
 # AstFilterPipe
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
+## Using this sample repo
 
-## Development server
+### Clone this repository
+`git clone https://github.com/cherryApp/ast-filter-pipe.git`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Change the working directory
+`cd ast-filter-pipe`
 
-## Code scaffolding
+### Install the json-server
+`npm i -g json-server`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Start the data server
+`json-server .\server\employee.json --watch`
 
-## Build
+### Start the Angular app
+`ng serve -o`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### The app will be open in the default browser. Enjoy!
