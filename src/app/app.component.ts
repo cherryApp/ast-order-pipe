@@ -10,6 +10,7 @@ import { EmployeeService } from './service/employee.service';
 export class AppComponent {
 
   title = 'ast-filter-pipe';
+  phrase = '';
 
   list$: Observable<any[]> = this.employeeService.get();
 

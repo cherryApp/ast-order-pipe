@@ -30,7 +30,7 @@
         <div class="row">
             <div class="col-12 col-md-3 offset-md-9 offset-0">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="search">
+                    <input [(ngModel)]="phrase" type="text" class="form-control" placeholder="search">
                     <div class="input-group-append">
                         <button class="btn btn-secondary" type="button">
                           <i class="fa fa-search"></i>
@@ -52,7 +52,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let row of list$ | async">
+                <tr *ngFor="let row of list$ | async | filter:phrase">
                     <td>{{ row.id }}</td>
                     <td>{{ row.first_name }}</td>
                     <td>{{ row.last_name }}</td>
