@@ -5,11 +5,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { FilterPipe } from './pipe/filter.pipe';
+import { OrderPipe } from './pipe/order.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilterPipe,
+    OrderPipe,
   ],
   imports: [
     BrowserModule,

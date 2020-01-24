@@ -11,6 +11,8 @@ export class AppComponent {
 
   title = 'ast-filter-pipe';
   phrase = '';
+  orderDirection = 1;
+  lastColumn = '';
   cols: {title: string, key: string}[] = [
     {key: 'id', title: '#'},
     {key: 'first_name', title: 'First Name'},
@@ -25,5 +27,22 @@ export class AppComponent {
   constructor(
     private employeeService: EmployeeService,
   ) {}
+
+  getDirectionClass(key: string): {[propName: string]: boolean} {
+    return {
+      'fa-sort-amount-asc': this.orderDirection === 1,
+      'fa-sort-amount-desc': this.orderDirection === -1
+    };
+  }
+
+  onClickColumn(key: string): void {
+    if (key === this.lastColumn) {
+      this.orderDirection = this.orderDirection * -1;
+    } else {
+      this.orderDirection = 1;
+    }
+
+    this.lastColumn = key;
+  }
 
 }
