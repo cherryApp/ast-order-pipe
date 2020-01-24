@@ -1,12 +1,12 @@
-# AstFilterPipe
+# AstOrderPipe
 
 ## Using this sample repo
 
 ### Clone this repository
-`git clone https://github.com/cherryApp/ast-filter-pipe.git`
+`git clone https://github.com/cherryApp/ast-order-pipe.git`
 
 ### Change the working directory
-`cd ast-filter-pipe`
+`cd ast-order-pipe`
 
 ### Install the json-server
 `npm i -g json-server`
